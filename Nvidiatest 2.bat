@@ -24,8 +24,8 @@ powershell -Command ^
         $dest = '%OUTPUT_DIR%'; ^
         if (Test-Path $dest) { Remove-Item -Recurse -Force $dest }; ^
         New-Item -ItemType Directory -Force -Path $dest | Out-Null; ^
-        Copy-Item -Path "$src\*" -Destination $dest -Recurse -Force; ^
-        Write-Host 'Files copied successfully to: $dest' ^
+        Copy-Item -Path ($src + '\*') -Destination $dest -Recurse -Force; ^
+        Write-Host ('Files copied successfully to: ' + $dest) ^
     } else { ^
         Write-Error 'NVIDIA Control Panel package not found. Please install it from the Microsoft Store.'; ^
         exit 1 ^
