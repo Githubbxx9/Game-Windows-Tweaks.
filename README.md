@@ -27,4 +27,4 @@ https://github.com/xHybred/NvidiaProfileInspectorRevamped
 3. Set up nvidia Stuff.
 5. Install Fxsound.exe (Optional)  🎧 https://www.fxsound.com/
 6. will post more soon.
-
+7. Run Device Cleanup.exe
