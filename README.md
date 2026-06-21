@@ -1,7 +1,13 @@
 # Game-Windows-Tweaks.
 
 
-Game optimization's 
+!! warning use with caution !!
+
+"These scripts should only be used by users with advanced computer recovery expertise. Proceed with caution, as errors may occur."
+
+!! warning use with caution !!
+
+
 
 
 Creating a system restore point before using debloat scripts is a critical precaution because these scripts often uninstall essential system components or drivers. Removing specific drivers or system services can trigger a Blue Screen of Death (BSOD) if the operating system relies on those components for stability or hardware communication.
