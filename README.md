@@ -24,7 +24,8 @@ https://github.com/xHybred/NvidiaProfileInspectorRevamped
 
 1. Remove Sound.ps1
 2. RemoveBloatAdapters,KeepEthernet.ps1
-3. Set up nvidia Stuff.
+3. Run Device Cleanup.exe
+4. Setup Nvidia Stuff.
 5. Install Fxsound.exe (Optional)  🎧 https://www.fxsound.com/
-6. will post more soon.
-7. Run Device Cleanup.exe
+6. Install SteamMini.ps1
+7. Will post more soon.
