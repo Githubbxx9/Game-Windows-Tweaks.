@@ -22,7 +22,7 @@ Nvidia inspector.
 https://github.com/xHybred/NvidiaProfileInspectorRevamped
 
 
-1. Remove Sound.ps1
+1. Remove Sound.ps1 ( removes all sound )
 2. RemoveBloatAdapters,KeepEthernet.ps1
 3. Run Device Cleanup.exe
 4. Setup Nvidia Stuff.
