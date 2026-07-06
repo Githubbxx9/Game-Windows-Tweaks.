@@ -23,9 +23,11 @@ https://github.com/xHybred/NvidiaProfileInspectorRevamped
 
 
 1. Remove Sound.ps1 ( removes all sound )
-2. RemoveBloatAdapters,KeepEthernet.ps1
+2. RemoveBloatAdapters,KeepEthernet.ps1- Must be Connect to ethernet already.
 3. Run Device Cleanup.exe
-4. Setup Nvidia Stuff.
-5. Install Fxsound.exe (Optional)  🎧 https://www.fxsound.com/
-6. Install SteamMini.ps1
-7. Will post more soon.
+4. Add Take_Ownership_Advanced_Context_Menu.reg
+5. Place NVIDIACorp.NVIDIAControlPanel_8.1.969.0_x64__56jybvy8sckqj Folder into  "C:\Program Files\WindowsApps" Use Right click context menu (Takeownership-Gain exclusive rights )
+6. Run Nvidia.bat.  ( installs control panal )
+7. Install Fxsound.exe (Optional)  🎧 https://www.fxsound.com/
+8. Install SteamMini.ps1
+9. Will post more soon.
