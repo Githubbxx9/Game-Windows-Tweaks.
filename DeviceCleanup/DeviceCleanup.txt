@@ -1,0 +1,81 @@
+
+DeviceCleanup V1.2.1 - Removes non-present devices from the Windows device management
+Freeware by Uwe Sieber - www.uwe-sieber.de
+
+Works under Window 2000, XP, Windows Vista, Windows 7, 8, 10, 11 and their Server versions.
+
+On x64 Windows only the x64 release can delete devices.
+
+
+All devices listed by DeviceCleanup are currently not present, usually they have the problem
+code 45 which is CM_PROB_PHANTOM, "The devinst currently exists only in the registry".
+
+You can select one, multiple or all devices and remove them by pressing the Delete key or
+right-click and select "Remove Device". If the device is attached again it will be detected as new.
+
+The 'last used' time comes from the write time of the device's registry key
+under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum
+
+On some Windows the times are set on startup or even while it is running every few hours,
+so all devices seem to have the same age. On a Windows 7 the Sysinternal ProcessMonitor
+shows a recurring RegSetKeySecurity caused by a svchost.exe hosting the PlugPlay service
+every 11 hours 45 minutes. No idea what is causing it. I you want to check yourself:
+Set a filter "operation is RegSetKeySecurity" and set the option "Filter -> Drop filtered
+events", otherwise your pagefile (or other backing file) gets flooded in no time.
+
+On most Windows the time is set when the device gets active, so it makes sense to use this as
+'last used' time.
+
+If the last device using a certain COM-port is removed then the reservation under
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\COM Name Arbiter
+is removed.
+Since Windows 10 version 1903 there is a sub-key "Devices" here where Windows keeps track of COM-ports
+and their devices. Windows uses this to remove the reservation when a COM-port device is uninstalled.
+Finally after 25 years...
+
+For removing devices admin privileges are required, otherwise you get an access denied error.
+
+
+System Restore Point
+
+Since Windows 8 one can only create one SRP within 24 hours. For any further the API pretends to have
+created one but did nothing in fact.
+This can be overruled by setting the registry value SystemRestorePointCreationFrequency under
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore to a minimal allowed
+interval in minutes, 0 disables the blocking completely.
+When creating a System Restore Point, DeviceCleanup sets this value to 0 temporarily.
+
+
+Setting in the INI file
+
+By default the settings are stored in a DeviceCleanup.ini file beside the EXE.
+Since V1.2, when running from the "C:\Program Files" folder and the INI cannot be written because of
+missing admin privileges it writes to "C:\ProgramData\Uwe Sieber\DeviceCleanup.ini" instead.
+
+
+
+A command line version is available too:
+http://www.uwe-sieber.de/misc_tools_e.html#devicecleanupcmd
+
+
+
+Licence: Freeware
+
+Allowed:
+- usage in any environment, including commercial
+- include in software products, including commercial
+- include on CD/DVD of computer magazines
+- making available for download by means of package managers
+
+Not allowed:
+- modify any of the files
+- offer for download by means of a "downloader" software
+
+
+
+Uwe Sieber, mail@uwe-sieber.de
+Dec 2021
+
+
+
+
